@@ -16,7 +16,9 @@ The test should work well on all modern browsers but it depends on browsers doin
 
 To test, I HIGHLY recommend running the testing with a slow network connection (1.6 Mbps 3G should be fine). That will make any issues glaringly obvious. In case it wasn't obvious, you will need to deploy this test page on your server to use it as a test target and make sure it is HTTPS (otherwise HTTP/2 will not be used).
 
-When it is working well you will see the important resources at the end of the waterfall completing quickly:
+When it is working well you will see the important resources at the end of the waterfall completing quickly.
+
+**IMPORTANT:** All Four high-priority requests need to complete early. It is not uncommon for one or two of them to complete early but bottom.js and visible.jpg get delayed. That is a symptom of a server that supports prioritization but with too much output buffering (it saw the font request before it had sent enough data to fill the buffers).
 
 ![Waterfall with important resources completing late.](docs/waterfall_good.png)
 
@@ -27,3 +29,7 @@ When it is not working well you will see them delayed significantly:
 The visual experience is also significantly faster when working correctly:
 
 ![Filmstrip](docs/filmstrip.png)
+
+As of Chrome 70, the HTTP/2 dependency/priority tree for the page looks like this (all requests are marked as "exclusive"):
+
+![Priority tree](docs/priorities.png)
