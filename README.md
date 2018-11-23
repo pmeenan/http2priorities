@@ -14,7 +14,7 @@ The text near the top of the page will also change after the last blocking scrip
 
 The test should work well on all modern browsers but it depends on browsers doing something intelligent with priorities. It was crafted specifically to exercise Chrome's prioritization and expose server prioritization issues.
 
-To test, I HIGHLY recommend running the testing with a slow network connection (1.6 Mbps 3G should be fine). That will make any issues glaringly obvious. In case it wasn't obvious, you will need to deploy this test page on your server to use it as a test target and make sure it is HTTPS (otherwise HTTP/2 will not be used).
+To test, I HIGHLY recommend running the testing with a slow network connection (1.6 Mbps 3G should be fine). That will make any issues glaringly obvious. In case it wasn't obvious, you will need to deploy this test page on your server to use it as a test target and make sure it is HTTPS (otherwise HTTP/2 will not be used). DO NOT use Chrome Dev Tools' built-in connection profiles. The traffic shaping for those are done internal to the browser and introduce different buffers that lead to incorrect results. There are [good network-level options available on most platforms](https://calendar.perfplanet.com/2016/testing-with-realistic-networking-conditions/).
 
 When it is working well you will see the important resources at the end of the waterfall completing quickly.
 
