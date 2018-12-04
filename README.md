@@ -1,5 +1,5 @@
 # http2priorities
-Test Page for HTTP/2 prioritization (server and browser)
+Test Page for HTTP/2 prioritization (server and browser). For the current status of prioritization support across CDN's, cloud and hostring providers please see Andy Davies' [status page](https://github.com/andydavies/http2-prioritization-issues) (and submit results to have them added).
 
 Server support for HTTP/2 prioritization requires getting a lot of things right (more details in the [Cloudflare blog post](https://blog.cloudflare.com/http-2-prioritization-with-nginx/)).
 
