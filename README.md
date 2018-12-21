@@ -3,6 +3,10 @@ Test Page for HTTP/2 prioritization (server and browser)
 
 Server support for HTTP/2 prioritization requires getting a lot of things right (more details in the [Cloudflare blog post](https://blog.cloudflare.com/http-2-prioritization-with-nginx/)).
 
+It is HIGHLY recommended you use the newer [stand-alone test](stand-alone) if possible which does not require being able to upload content to the system being tested.
+
+## Legacy Test
+
 This is a test page for exercising HTTP/2 prioritization (particularly for Chrome). It is structured in such a way that the preload scanner will discover low-priority images that are displayed below the viewport and start loading them before 4 high-priority resources are discovered:
 
 1. The custom font used for the page (not discovered until layout).
