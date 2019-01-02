@@ -21,7 +21,7 @@ Using WebPageTest, the recommended configuration is:
 
 ## Generating the test URL
 
-You provide the URL for the image to test as an ```image=``` query parameter to the page (make sure to [url-encode](https://meyerweb.com/eric/tools/dencoder/) the URL or the test will not run). The image MUST be hosted over HTTP/2 (or QUIC) otherwise the results of the test will be invalid.
+You provide the URL for the image to test as an ```image=``` query parameter to the page (make sure to [url-encode](https://meyerweb.com/eric/tools/dencoder/) the URL or the test will not run). The image MUST be hosted over HTTP/2 (or QUIC) otherwise the results of the test will be invalid. The test appends random query strings to the end of the image URL and will only work if the server still returns the image (most do but some like Twitter's image CDN do not).
 
 i.e. Assuming you want to test the system hosting the image:
 
