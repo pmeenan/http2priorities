@@ -14,7 +14,7 @@ Using WebPageTest, the recommended configuration is:
 
 * **Location** - Any location with Chrome available (Dulles, VA generally recommended).
 * **Browser** - Chrome.
-* **Connection** - 3G (1.6 Mbps/768 Kbps, 300ms RTT).
+* **Connection** - "3G Fast" (1.6 Mbps/768 Kbps, 150ms RTT).
 * **Runs** - 3 (or more) to make sure the results are consistent.
 
 ![Test Options](../docs/stand-alone-options.png)
